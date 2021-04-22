@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPerFect(number){
+        if(number<=0){
+            return false;
+
+        }
+        let sum=0;
+        for(i=1;i<number;i++){
+            if(number%i==0){
+                sum+=i;
+            }
+        }
+        if(number==sum){
+            return  true;
+        }return false;
+    }
+    function findIndex(arr){
+        let indexArr=[];
+        for(i=0;i<arr.length;i++){
+            if(isPerFect(arr[i])==true){
+                indexArr.push(i)
+            }
+        }return indexArr;
+    }
+    let arr1=[1,2,3,4,5,6,7,8,9];
+    let indexArr=findIndex(arr1);
+    if(indexArr.length==0){
+        document.write("không có số hoàn hảo:")
+    }else {
+        for(i=0;i<indexArr.length;i++);
+        document.write(indexArr[i]);
+    }
+
+</script>
+
+</body>
+</html>

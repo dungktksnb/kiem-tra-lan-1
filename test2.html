@@ -7,16 +7,16 @@
 <body>
 <script>
     function isPerFect(number){
-        if(number<=0){
-            return false;
+            if(number<=0){
+                return false;
 
-        }
-        let sum=0;
-        for(i=1;i<number;i++){
-            if(number%i==0){
-                sum+=i;
             }
-        }
+            let sum=0;
+            for(i=1;i<number;i++){
+                if(number%i==0){
+                    sum+=i;
+                }
+            }
         if(number==sum){
             return  true;
         }return false;
