@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPerFect(number){
+        if(number<=0){
+            return false;
+
+        }
+        let sum=0;
+        for(i=1;i<number;i++){
+            if(number%i==0){
+                sum+=i;
+            }
+        }
+        if(number==sum){
+            return  true;
+        }return false;
+
+
+
+
+
+    }
+    N=+prompt("nhập số :");
+    if(isPerFect(N)==true){
+        document.write(N +" " + "là số hoàn hảo");
+    }else {
+        document.write(N + " " +"không là số hoàn hảo");
+    }
+</script>
+
+</body>
+</html>
